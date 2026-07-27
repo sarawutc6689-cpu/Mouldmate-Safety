@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตรวจสอบอุปกรณ์ - Safety Mouldmate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* --- ใช้สไตล์หลักจาก Safety Home.html ปรับเล็กน้อย --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #1a3a3a;
+            --safety-green: #27ae60;
+            --safety-orange: #e67e22;
+            --light-bg: #f0f4f0;
+            --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        body {
+            background: var(--light-bg);
+            min-height: 100vh;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .page-header {
+            background: white;
+            border-radius: 15px;
+            padding: 25px 30px;
+            margin-bottom: 35px;
+            box-shadow: var(--card-shadow);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 6px solid var(--safety-green);
+        }
+
+        .page-header h1 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .page-header h1 i {
+            color: var(--safety-green);
+        }
+
+        .back-btn {
+            background: #ecf0f1;
+            color: var(--primary);
+            padding: 10px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-btn:hover {
+            background: #bdc3c7;
+            transform: translateY(-2px);
+        }
+
+        /* Grid */
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .equipment-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px 20px 20px;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #e0e7e0;
+        }
+
+        .equipment-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .equipment-card .icon {
+            font-size: 2.8rem;
+            color: var(--safety-green);
+            margin-bottom: 15px;
+        }
+
+        .equipment-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .equipment-card p {
+            color: #5a6a7a;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            flex-grow: 1;
+            margin-bottom: 18px;
+        }
+
+        .equipment-card .btn {
+            display: inline-block;
+            padding: 10px 18px;
+            background: var(--safety-green);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            align-self: flex-start;
+        }
+
+        .equipment-card .btn:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .equipment-card .btn i {
+            margin-right: 6px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 12px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            background: #e8f8f0;
+            color: var(--safety-green);
+            margin-top: 8px;
+            margin-bottom: 12px;
+            align-self: flex-start;
+        }
+
+        .badge-warning {
+            background: #fef5e8;
+            color: var(--safety-orange);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .page-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            .page-header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="page-header">
+            <h1>
+                <i class="fas fa-clipboard-check"></i>
+                ตรวจสอบอุปกรณ์ความปลอดภัย
+            </h1>
+            <a href="Home.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> กลับหน้าแรก
+            </a>
+        </div>
+
+        <!-- Grid -->
+        <div class="equipment-grid">
+            <!-- 1. ถังดับเพลิง (ลิงก์ไปยังฟอร์มของคุณ) -->
+            <div class="equipment-card">
+                <div class="icon">
+                    <i class="fas fa-fire-extinguisher"></i>
+                </div>
+                <h3>ตรวจสอบถังดับเพลิง</h3>
+                <p>ตรวจสอบสภาพความพร้อมใช้งานของถังดับเพลิงทุกชนิดในพื้นที่ และบันทึกผลการตรวจสอบ</p>
+                <span class="badge">ต้องตรวจสอบทุกเดือน</span>
+                <a href="https://script.google.com/macros/s/AKfycbyvPNnyQpPCDP382yUiCrMt0b4ka-2C9Lh-besgpbK4K7vjLwSKoChwFBTXpP6Sscch5w/exec" target="_blank" class="btn">
+                    <i class="fas fa-external-link-alt"></i> ไปที่แบบฟอร์ม
+                </a>
+            </div>
+
+            <!-- 2. ชุดปฐมพยาบาล (ตัวอย่างเพิ่มเติม) -->
+            <div class="equipment-card">
+                <div class="icon">
+                    <i class="fas fa-medkit"></i>
+                </div>
+                <h3>ตรวจสอบชุดปฐมพยาบาล</h3>
+                <p>ตรวจสอบจำนวนและอายุการใช้งานของเวชภัณฑ์ในชุดปฐมพยาบาลตามจุดต่างๆ</p>
+                <span class="badge">ตรวจสอบทุกสัปดาห์</span>
+                <a href="#" class="btn">
+                    <i class="fas fa-external-link-alt"></i> ไปที่แบบฟอร์ม
+                </a>
+            </div>
+
+            <!-- 3. อุปกรณ์ PPE -->
+            <div class="equipment-card">
+                <div class="icon">
+                    <i class="fas fa-hard-hat"></i>
+                </div>
+                <h3>ตรวจสอบอุปกรณ์ PPE</h3>
+                <p>ตรวจสอบสภาพและความพร้อมของอุปกรณ์ป้องกันส่วนบุคคล (หมวกกันน็อค, แว่นตา, รองเท้านิรภัย)</p>
+                <span class="badge badge-warning">ตรวจสอบก่อนใช้งาน</span>
+                <a href="#" class="btn">
+                    <i class="fas fa-external-link-alt"></i> ไปที่แบบฟอร์ม
+                </a>
+            </div>
+
+            <!-- 4. ระบบแจ้งเตือนอัคคีภัย -->
+            <div class="equipment-card">
+                <div class="icon">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <h3>ตรวจสอบระบบแจ้งเตือน</h3>
+                <p>ตรวจสอบการทำงานของสัญญาณแจ้งเตือนอัคคีภัยและระบบเตือนภัยฉุกเฉิน</p>
+                <span class="badge">ตรวจสอบรายไตรมาส</span>
+                <a href="#" class="btn">
+                    <i class="fas fa-external-link-alt"></i> ไปที่แบบฟอร์ม
+                </a>
+            </div>
+
+            <!-- 5. ทางหนีไฟและป้าย -->
+            <div class="equipment-card">
+                <div class="icon">
+                    <i class="fas fa-door-open"></i>
+                </div>
+                <h3>ตรวจสอบทางหนีไฟ</h3>
+                <p>ตรวจสอบเส้นทางหนีไฟ ป้ายบอกทาง และไฟฉุกเฉินให้พร้อมใช้งานเสมอ</p>
+                <span class="badge badge-warning">ตรวจสอบรายเดือน</span>
+                <a href="#" class="btn">
+                    <i class="fas fa-external-link-alt"></i> ไปที่แบบฟอร์ม
+                </a>
+            </div>
+
+            <!-- 6. อุปกรณ์กู้ภัยและช่วยชีวิต -->
+            <div class="equipment-card">
+                <div class="icon">
+                    <i class="fas fa-life-ring"></i>
+                </div>
+                <h3>อุปกรณ์กู้ภัยและช่วยชีวิต</h3>
+                <p>ตรวจสอบความพร้อมของอุปกรณ์กู้ภัย เช่น เชือก, เข็มขัดนิรภัย, อุปกรณ์ช่วยชีวิต</p>
+                <span class="badge">ตรวจสอบทุก 6 เดือน</span>
+                <a href="#" class="btn">
+                    <i class="fas fa-external-link-alt"></i> ไปที่แบบฟอร์ม
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
