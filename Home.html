@@ -178,6 +178,10 @@
         .icon-check {
             background: linear-gradient(to right, #34495e, #2c3e50);
         }
+
+        .icon-5s {
+            background: linear-gradient(to right, #16a085, #0e6655);
+        }
         
         .card-title {
             font-size: 1.4rem;
@@ -462,7 +466,7 @@
                 <i class="fas fa-exclamation-triangle"></i>
                 <span>ความปลอดภัยคือ <span class="highlight">หน้าที่ของทุกคน</span></span>
                 <i class="fas fa-shield-alt"></i>
-                <span>วันที่ปลอดภัยสะสม: <span class="highlight" id="safetyDays"></span> วัน</span>
+                <span>วันที่ปลอดภัยสะสม: <span class="highlight" id="safetyDays">1,247</span> วัน</span>
                 <i class="fas fa-flag-checkered"></i>
             </div>
         </header>
@@ -479,7 +483,6 @@
                 <div class="card-body">
                     <p class="card-description">แจ้งเหตุอุบัติเหตุ อุบัติการณ์ หรือเหตุการณ์เกือบเกิดอุบัติเหตุ (Near Miss) เพื่อให้ทีมความปลอดภัยดำเนินการสอบสวนและป้องกัน</p>
                     <div class="card-badge badge-danger">แจ้งด่วน</div>
-                    <p style="color: red; font-weight: bold;">กำลังดำเนินการพัฒนา</p>
                     <a href="#" class="btn btn-danger">
                         <i class="fas fa-exclamation-triangle"></i> แจ้งอุบัติเหตุ
                     </a>
@@ -496,7 +499,6 @@
                 </div>
                 <div class="card-body">
                     <p class="card-description">ประเมินความเสี่ยงในพื้นที่ปฏิบัติงาน ระบุอันตราย และกำหนดมาตรการควบคุมเพื่อลดความเสี่ยง</p>
-                    <p style="color: red; font-weight: bold;">กำลังดำเนินการพัฒนา</p>
                     <a href="#" class="btn btn-warning">
                         <i class="fas fa-external-link-alt"></i> ประเมินความเสี่ยง
                     </a>
@@ -514,7 +516,6 @@
                 <div class="card-body">
                     <p class="card-description">ลงทะเบียนอบรมความปลอดภัย ตารางอบรม และทดสอบความรู้ด้านความปลอดภัยในองค์กร</p>
                     <div class="card-badge">หลักสูตรใหม่</div>
-                    <p style="color: red; font-weight: bold;">กำลังดำเนินการพัฒนา</p>
                     <a href="#" class="btn">
                         <i class="fas fa-external-link-alt"></i> ดูตารางอบรม
                     </a>
@@ -531,7 +532,7 @@
                 </div>
                 <div class="card-body">
                     <p class="card-description">ตรวจสอบสภาพอุปกรณ์ เครื่องจักร และอุปกรณ์ป้องกันส่วนบุคคล (PPE) ก่อนการปฏิบัติงาน</p>
-                    <a href="https://sarawutc6689-cpu.github.io/Mouldmate-Safety/Equipment-Check.html" class="btn">
+                    <a href="#" class="btn">
                         <i class="fas fa-external-link-alt"></i> ตรวจสอบอุปกรณ์
                     </a>
                 </div>
@@ -547,7 +548,6 @@
                 </div>
                 <div class="card-body">
                     <p class="card-description">แผนการอพยพหนีไฟ แผนรับมือเหตุฉุกเฉิน และจุดรวมพลของแต่ละพื้นที่ภายในองค์กร</p>
-                    <p style="color: red; font-weight: bold;">กำลังดำเนินการพัฒนา</p>
                     <a href="#" class="btn btn-warning">
                         <i class="fas fa-external-link-alt"></i> ดูแผนฉุกเฉิน
                     </a>
@@ -565,7 +565,7 @@
                 <div class="card-body">
                     <p class="card-description">ขอใบอนุญาตทำงานในพื้นที่เสี่ยง งานที่ต้องใช้ใบอนุญาต (Work Permit) เช่น งานร้อน งานที่สูง งานในที่อับอากาศ</p>
                     <div class="card-badge badge-warning">ต้องขออนุญาต</div>
-                    <a href="https://sarawutc6689-cpu.github.io/Mouldmate-Safety/WorkPermit.html" class="btn">
+                    <a href="#" class="btn">
                         <i class="fas fa-external-link-alt"></i> ขอใบอนุญาต
                     </a>
                 </div>
@@ -581,9 +581,25 @@
                 </div>
                 <div class="card-body">
                     <p class="card-description">ตรวจสอบความปลอดภัยในพื้นที่ปฏิบัติงาน (Safety Walkthrough) และรายงานผลการตรวจสอบ</p>
-                    <p style="color: red; font-weight: bold;">กำลังดำเนินการพัฒนา</p>
                     <a href="#" class="btn">
                         <i class="fas fa-external-link-alt"></i> ตรวจสอบพื้นที่
+                    </a>
+                </div>
+            </div>
+
+            <!-- ตรวจ 5ส -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon icon-5s">
+                        <i class="fas fa-broom"></i>
+                    </div>
+                    <div class="card-title">ตรวจ 5ส</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">ระบบตรวจกิจกรรม 5ส ประจำสัปดาห์ บันทึกคะแนนแยกตามพื้นที่ แนบรูปถ่ายประกอบ ดูรายงานแนวโน้มคะแนน และติดตามการแก้ไขข้อบกพร่อง</p>
+                    <div class="card-badge">ตรวจรายสัปดาห์</div>
+                    <a href="https://sarawutc6689-cpu.github.io/Mouldmate-HR/Safety/5S/index.html" class="btn" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> เข้าสู่ระบบตรวจ 5ส
                     </a>
                 </div>
             </div>
@@ -697,7 +713,7 @@
             const input = document.getElementById('safetyPassword');
             const error = document.getElementById('safetyError');
             
-            if (input.value === '26102563') {
+            if (input.value === 'safety2026') {
                 closeSafetyModal();
                 window.open('https://sarawutc6689-cpu.github.io/Mouldmate-HR/safety-dashboard.html', '_blank');
             } else {
